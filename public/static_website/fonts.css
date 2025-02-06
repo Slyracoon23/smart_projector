@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Silka';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Silka'), url("Silka-Regular.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'Silka-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Silka'), url("") format('opentype');
+}
+
+@font-face {
+  font-family: 'Silka-Thin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Silka'), url("") format('opentype');
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Bagoss Standard'),
+    url("") format('woff2');
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Bagoss Standard'),
+    url("") format('woff2');
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bagoss Standard'),
+    url("") format('woff2');
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Bagoss Standard'),
+    url("") format('woff2');
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Bagoss Standard'),
+    url("") format('woff2');
+}
+
+@font-face {
+  font-family: 'Bagoss Standard';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Bagoss Standard'),
+    url("") format('woff2');
+}
+
+@font-face {
+  font-family: 'Bagoss';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bagoss'),
+    url("") format('opentype'),
+    url("") format('woff'),
+    url("") format('woff2'),
+    url("") format('truetype');
+}
+
+@font-face {
+  font-family: 'Bagoss';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Bagoss'),
+    url("") format('opentype'),
+    url("") format('woff'),
+    url("") format('woff2'),
+    url("") format('truetype');
+}
+
+@font-face {
+  font-family: 'Bagoss';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Bagoss'),
+    url("") format('opentype'),
+    url("") format('woff'),
+    url("") format('woff2'),
+    url("") format('truetype');
+}
+
+@font-face {
+  font-family: '"Bagoss Extended"';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Bagoss Extended'),
+    url("")
+      format('opentype'),
+    url("") format('woff'),
+    url("") format('woff2'),
+    url("")
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Bagoss Extended';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Bagoss Extended'),
+    url("") format('opentype'),
+    url("") format('truetype');
+}
+
+@font-face {
+  font-family: 'Bagoss Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Bagoss Condensed'),
+    url("BagossCondensed-Medium.woff2") format('woff2');
+}
