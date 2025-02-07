@@ -17916,40 +17916,16 @@
                   style="background-color: #1a1a1a; color: white; padding: 16px 32px; border: none; border-radius: 24px; font-size: 16px; font-weight: 500; cursor: pointer; width: fit-content; margin: 8px auto 0; min-width: 200px;">
                   Book a demo
                 </button>
+
+                <!-- Hidden Cal.com button -->
+                <button 
+                  id="calendarButton"
+                  data-cal-link="earl-potters/30min"
+                  data-cal-namespace="30min"
+                  data-cal-config='{"layout":"month_view"}'
+                  style="display: none;">
+                </button>
               </form>
-
-              <style>
-                .spinner {
-                  display: inline-block;
-                  width: 20px;
-                  height: 20px;
-                  border: 3px solid rgba(255,255,255,.3);
-                  border-radius: 50%;
-                  border-top-color: #fff;
-                  animation: spin 1s ease-in-out infinite;
-                  margin-left: 8px;
-                  vertical-align: middle;
-                }
-
-                @keyframes spin {
-                  to { transform: rotate(360deg); }
-                }
-
-                .button-content {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  gap: 8px;
-                }
-              </style>
-
-              <div id="calendarModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
-                <div style="position: relative; width: 90%; max-width: 800px; height: 80%; margin: 5% auto; background: white; padding: 20px; border-radius: 8px;">
-                  <button onclick="closeCalendar()" style="position: absolute; right: 10px; top: 10px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
-                  <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1F0mZHCVR9FJ5FHr2ZJzL43SwWAz4F3k6N4GbDMExywXj5LpqVlce9tckn26r7PUjsoUB5MikU?gv=true" 
-                    style="border: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
-                </div>
-              </div>
 
               <script>
                 const personalDomains = [
@@ -17987,26 +17963,6 @@
                   return true;
                 }
 
-                function closeCalendar() {
-                  document.getElementById('calendarModal').style.display = 'none';
-                }
-
-                function setButtonLoading(isLoading) {
-                  const button = document.getElementById('submitButton');
-                  if (isLoading) {
-                    button.disabled = true;
-                    button.innerHTML = `
-                      <div class="button-content">
-                        <span>Processing...</span>
-                        <div class="spinner"></div>
-                      </div>
-                    `;
-                  } else {
-                    button.disabled = false;
-                    button.innerHTML = 'Book a demo';
-                  }
-                }
-
                 function validateForm(event) {
                   event.preventDefault();
 
@@ -18014,6 +17970,7 @@
                   const firstName = document.getElementById('firstName');
                   const lastName = document.getElementById('lastName');
                   const companySize = document.getElementById('companySize');
+                  const calendarButton = document.getElementById('calendarButton');
 
                   if (!firstName.value || !lastName.value || !workEmail.value || !companySize.value) {
                     alert('Please fill in all required fields');
@@ -18033,28 +17990,28 @@
                   };
                   console.log('Form data:', formData);
 
-                  // Show loading state
-                  setButtonLoading(true);
+                  // Configure Cal with the collected form data
+                  Cal.ns["30min"]("preload", {
+                    name: `${firstName.value} ${lastName.value}`,
+                    email: workEmail.value,
+                    notes: `Company Size: ${companySize.value}`,
+                  });
 
-                  // Simulate processing time (1 second)
-                  setTimeout(() => {
-                    // Hide loading state
-                    setButtonLoading(false);
-                    
-                    // Show the calendar modal
-                    document.getElementById('calendarModal').style.display = 'block';
-                  }, 1000);
+                  // Programmatically click the hidden calendar button
+                  calendarButton.click();
                   
                   return false;
                 }
-
-                // Close calendar modal if clicking outside
-                document.getElementById('calendarModal').addEventListener('click', function(event) {
-                  if (event.target === this) {
-                    closeCalendar();
-                  }
-                });
               </script>
+
+              <!-- Cal element-click embed code begins -->
+              <script type="text/javascript">
+              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+              Cal("init", "30min", {origin:"https://cal.com"});
+
+              Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+              </script>
+              <!-- Cal element-click embed code ends -->
             </div>
           </div>
           <!-- <div class="MuiBox-root css-1uzxem">
