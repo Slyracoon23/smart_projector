@@ -21,11 +21,13 @@ export const metadata: Metadata = {
     description: "The best way to manage software contractors across the globe. Automate onboarding, managing and tracking in minutes while minimizing risks of delayed projects and missed deadlines.",
     url: "https://www.smartprojector.app/",
     type: "website",
+    images: ['/og_logo_image.png'],
   },
   twitter: {
     card: "summary_large_image",
     title: "SmartProjector - Global Software Contractor Management Solution",
     description: "The best way to manage software contractors across the globe. Automate onboarding, managing and tracking in minutes while minimizing risks of delayed projects and missed deadlines.",
+    images: ['/og_logo_image.png'],
   },
   alternates: {
     canonical: "https://www.smartprojector.app/"
