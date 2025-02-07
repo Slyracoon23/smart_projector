@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SmartProjector - Global Software Contractor Management Solution",
   description: "Manage software contractors easier than ever. Even minimize your misclassification risks with delayed projects and missed deadlines. Automate onboarding, managing and tracking in minutes.",
-  metadataBase: new URL('https://www.smartprojector.com'),
+  metadataBase: new URL('https://www.smartprojector.app'),
   openGraph: {
     title: "SmartProjector - Global Software Contractor Management Solution",
     description: "The best way to manage software contractors across the globe. Automate onboarding, managing and tracking in minutes while minimizing risks of delayed projects and missed deadlines.",
-    url: "https://www.smartprojector.com/",
+    url: "https://www.smartprojector.app/",
     type: "website",
   },
   twitter: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "The best way to manage software contractors across the globe. Automate onboarding, managing and tracking in minutes while minimizing risks of delayed projects and missed deadlines.",
   },
   alternates: {
-    canonical: "https://www.smartprojector.com/"
+    canonical: "https://www.smartprojector.app/"
   }
 };
 
